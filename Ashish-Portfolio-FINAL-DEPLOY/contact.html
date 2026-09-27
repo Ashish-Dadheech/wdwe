@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Ashish Dadheech</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f1f5f9;
+      }
+
+      header {
+        background-color: #1e293b;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #00d1d1;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #00d1d1;
+      }
+
+      .contact-section {
+        padding: 60px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 50px;
+      }
+
+      .contact-form {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        max-width: 400px;
+        width: 100%;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+
+      .contact-form textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .contact-form button {
+        width: 100%;
+        padding: 12px;
+        background-color: #3b82f6;
+        color: white;
+        border: none;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .contact-form button:hover {
+        background-color: #2563eb;
+      }
+
+      .socials {
+        text-align: center;
+      }
+
+      .socials h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #0f172a;
+      }
+
+      .socials a {
+        font-size: 2rem;
+        color: #1e293b;
+        margin: 0 15px;
+        transition: color 0.3s ease;
+      }
+
+      .socials a:hover {
+        color: #0ea5e9;
+      }
+
+      footer {
+        background-color: #1e293b;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+        }
+
+        header {
+          flex-direction: column;
+          gap: 10px;
+          text-align: center;
+        }
+
+        .contact-section {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ✅ Navbar -->
+    <header>
+      <div class="logo">Ashish Dadheech</div>
+      <nav>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="skills.html">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ✅ Contact Section -->
+    <section class="contact-section">
+      <!-- Left: Contact Form -->
+      <div class="contact-form">
+        <form>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Right: Social Links -->
+      <div class="socials">
+        <h2>or meet on socials here</h2>
+        <a href="https://github.com/Ashish-Dadheech" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/ashish-dadheech-5119041a9/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- ✅ Footer -->
+    <footer style="position: relative; top: 80px">
+      © 2025 Ashish Dadheech. All rights reserved.
+    </footer>
+  </body>
+</html>

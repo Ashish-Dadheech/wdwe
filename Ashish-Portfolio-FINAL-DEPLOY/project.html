@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ashish Dadheech - Projects Carousel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f1f5f9;
+    }
+
+    /* Navbar */
+    header {
+      background-color: #1e293b;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00d1d1;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #00d1d1;
+    }
+
+    /* Carousel */
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 30px 0;
+      color: #0f172a;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 20s linear infinite;
+    }
+
+    .project-card {
+      flex: 0 0 auto;
+      width: 250px;
+      margin: 0 15px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .project-image {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    .project-subtitle {
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .carousel-container:hover .carousel-track {
+      animation-play-state: paused;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1e293b;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <header>
+    <div class="logo">Ashish Dadheech</div>
+    <nav>
+      <ul>
+        <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="project.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ✅ Projects Section -->
+  <h1>Projects</h1>
+  <div class="carousel-container">
+    <div class="carousel-track" id="carousel-track">
+      <!-- Duplicate items for infinite effect -->
+      <div class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" class="project-image" />
+        <h3 class="project-title">E-commerce App</h3>
+        <p class="project-subtitle">Backend Development</p>
+      </div>
+
+      <div class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4339/4339637.png" class="project-image" />
+        <h3 class="project-title">Entertainment App</h3>
+        <p class="project-subtitle">Azure + Gen AI</p>
+      </div>
+
+      <div class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/825/825540.png" class="project-image" />
+        <h3 class="project-title">Crypto Dashboard</h3>
+        <p class="project-subtitle">Frontend Development</p>
+      </div>
+
+      <div class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" class="project-image" />
+        <h3 class="project-title">Online Registration</h3>
+        <p class="project-subtitle">User Sign-Up</p>
+      </div>
+
+      <div class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" class="project-image" />
+        <h3 class="project-title">Restaurant Carousel</h3>
+        <p class="project-subtitle">Food Slider</p>
+      </div>
+
+      <!-- Repeat to create seamless scroll -->
+      <div class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" class="project-image" />
+        <h3 class="project-title">E-commerce App</h3>
+        <p class="project-subtitle">Backend Development</p>
+      </div>
+
+      <div class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4339/4339637.png" class="project-image" />
+        <h3 class="project-title">Entertainment App</h3>
+        <p class="project-subtitle">Azure + Gen AI</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Footer -->
+  <footer style="position: relative; top:200px">
+    © 2025 Ashish Dadheech. All rights reserved.
+  </footer>
+
+</body>
+</html>
